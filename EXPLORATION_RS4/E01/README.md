@@ -34,3 +34,28 @@ PRT(PeerReviewTemplate)
 
 참고 링크 및 코드 개선
 
+> 모든 기능을 함수로 짤거면 전역변수는 선언하지 않고 함수내에서 새로운 변수를 생성 후 리턴 하는것이 좋을 것 같습니다.
+> Functional Programing 관점으로 보았을때 전역변수를 계속 수정하는것은 에러를 유발할 위험을 가지고 있다고 합니다.
+
+``` python
+
+def training(X, y, cnt=1000, learning_rate=0.1):
+  
+  W = np.random.rand(x_train.shape[1])
+  b = np.random.rand()
+  dW = 0
+  db = 0
+  
+  for i in range(cnt):
+    dW,db = gradient(X,W,b,y,dW,db)
+    W -= learning_rate * dW
+    b -= learning_rate * db
+    L = loss(X,W,b,y)
+    if i % 100 == 0:
+      print(f'{i}, loss {L:.4f}')
+  
+  return W, b
+  
+W, b = training(x_train, y_train)
+test_val(x_test, W, b, y_test)
+```
