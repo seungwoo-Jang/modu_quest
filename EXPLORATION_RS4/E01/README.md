@@ -25,23 +25,7 @@ PRT(PeerReviewTemplate)
 - [ ] 코드가 에러를 유발할 가능성이 있나요?
 
 
-- [ ] 코드 작성자가 코드를 제대로 이해하고 작성했나요? (직접 인터뷰해보기)
-
-> 프로젝트 1번의 training 함수에서 전역변수로 선언한 W와 b값을 파라미터로 받고 리턴하고 있습니다.
-
-```python
-
-def training(X,W,b,y,dW,db,cnt=1000,learning_rate=0.1):
-  for i in range(cnt):
-    dW,db = gradient(X,W,b,y,dW,db)
-    W -= learning_rate * dW
-    b -= learning_rate * db
-    L = loss(X,W,b,y)
-    if i % 100 == 0:
-      print(f'{i}, loss {L:.4f}')
-  return W,b
-
-```
+- [X] 코드 작성자가 코드를 제대로 이해하고 작성했나요? (직접 인터뷰해보기)
 
 - [X] 코드가 간결한가요?
 
