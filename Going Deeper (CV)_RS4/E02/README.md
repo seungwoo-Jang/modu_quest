@@ -35,5 +35,5 @@ resnet50_sparse = keras.models.Sequential([
 - [⭕] 5.코드가 간결한가요?
 
 # 참고 링크 및 코드 개선 여부
-> 데이터 증강 tf core: https://www.tensorflow.org/tutorials/images/data_augmentation?hl=ko
+> 데이터 증강 tf core: https://www.tensorflow.org/tutorials/images/data_augmentation?hl=ko   
 > 전이학습 및 미세조정 tf core: https://www.tensorflow.org/guide/keras/transfer_learning?hl=ko
