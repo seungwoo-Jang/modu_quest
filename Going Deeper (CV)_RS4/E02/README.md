@@ -5,10 +5,10 @@
 # PRT(PeerReviewTemplate)
 각 항목을 스스로 확인하고 체크하고 확인하여 작성한 코드에 적용하세요.
 - [⭕] 1.코드가 정상적으로 동작하고 주어진 문제를 해결했나요?
-  Augmentation, CutMix와 MixUp을 적용한 데이터셋으로 훈련한 각각의 ResNet 모델이 수렴하였고,
-  성능 비교시 CumMix를 적용한 모델이 좋은 일반화 성능을 보였습니다.
+>  Augmentation, CutMix와 MixUp을 적용한 데이터셋으로 훈련한 각각의 ResNet 모델이 수렴하였고,
+>  성능 비교시 CumMix를 적용한 모델이 좋은 일반화 성능을 보였습니다.
 - [⭕] 2.주석을 보고 작성자의 코드가 이해되었나요?
-  주요 포인트마다 주석이 있어 코드 파악이 쉬웠습니다.
+>  주요 포인트마다 주석이 있어 코드 파악이 쉬웠습니다.
 ```python
 as_supervised=True, #지도학습용으로 데이터에 레이블 값 포함되어있음
 ds = ds.map(onehot,num_parallel_calls=4) # onehot을 하면 에러나서 sparse인 부분에선 제외
@@ -31,7 +31,7 @@ resnet50_sparse = keras.models.Sequential([
     keras.layers.Dense(num_classes, activation='softmax')
 ])
 ```
-여러인자를 받을때 *arg를 쓸 수 있다는 사실,  lms 코어가 4개라는 사실을 알았습니다! 
+> 여러인자를 받을때 *arg를 쓸 수 있다는 사실,  lms 코어가 4개라는 사실을 알았습니다! 
 - [⭕] 5.코드가 간결한가요?
 
 # 참고 링크 및 코드 개선 여부
